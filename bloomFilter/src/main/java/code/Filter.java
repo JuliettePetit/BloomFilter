@@ -62,25 +62,4 @@ public abstract class Filter {
         return Integer.parseInt(bin, 2); // we reconvert the string into int
     }
     
-    
-    /**
-     * if we net to use same k and m for all the filter, we can change it only once
-     */
-    /*public Filter(){
-        this.k = super.getK();
-        this.m = super.getM();
-    }*/
-    
-    /**
-     * if we need to test for a particular value
-     * @param k : int, the number of hash functions
-     * @param m : int, the length of the filter
-     */
-    /*public Filter(int k, int m){
-        setK(k);
-        setM(m);
-        this.k = getK();
-        this.m = getM();
-    }*/
-    
 }

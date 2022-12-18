@@ -22,7 +22,6 @@ public class FilterBenchmark {
             System.out.println("------------------------------------------------------------------------");
         }            
         
-        
         System.out.println("Analyze of error rate in the arrayList");
         int m = 10000;
         
@@ -70,7 +69,7 @@ public class FilterBenchmark {
         /* Simple array test */
         long startTime = System.nanoTime();
         // Here is the code to measure
-         for (int i = 0; i <100; i++){
+         for (int i = 0; i <10000; i++){
             arr.contains(rd.nextInt(10000));
         }
         // stop stopwatch
@@ -79,7 +78,7 @@ public class FilterBenchmark {
 
         /* Array list test */
         startTime = System.nanoTime();
-        for (int i = 0; i <100; i++){
+        for (int i = 0; i <10000; i++){
             a.contains(rd.nextInt(10000));
         }
         endTime = System.nanoTime();
@@ -87,7 +86,7 @@ public class FilterBenchmark {
 
         /* Linked list test */
         startTime = System.nanoTime();
-        for (int i = 0; i <100; i++){
+        for (int i = 0; i <10000; i++){
             l.contains(rd.nextInt(10000));
         }
         endTime = System.nanoTime();
@@ -114,8 +113,7 @@ public class FilterBenchmark {
                 c++; 
             }
         }
-        System.out.println("number of objects found that weren't put in :" + c);
-        System.out.println("number of objects inserted : "+ n);
+        System.out.println("number of objects inserted : "+ n + "\nnumber of hash functions : " + k);
         //System.out.println("number of wrong object found in the bloom filter :" + c/n);
         System.out.println((c*100)/m + "%");
         //return c/n; 
